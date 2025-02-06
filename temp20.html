@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          function showData(){
+            let num=document.getElementById("number").value
+            for(i=1;i<=10;i++){
+                let ans=num*i
+                document.getElementById("data").innerHTML+=`${num}*${i}=${ans}<br>`;
+            }
+          }
+    </script>
+</head>
+<body>
+    <p><input type="number" id="number" onchange="showData()"></p>
+     <button onClick="showData()">click</button>
+    <hr>
+    <div id="data"></div>
+</body>
+</html>
