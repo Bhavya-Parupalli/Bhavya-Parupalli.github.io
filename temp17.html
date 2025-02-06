@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-           function showData(){
-            let name=document.getElementById("name").value
-            let email=document.getElementById("email").value
-            let password=document.getElementById("password").value
-            let dob=document.getElementById("dob").value
-            data.innerHTML=`${name},${email},${password},${dob}`
+      let array = [];
+      function deleteUser(index){
+        array.splice(index,1);
+          showUsers()
+      }
+      function showUsers() {
+        let length = array.length;
+        let str = "";
+        for (let i = 0; i < length; i++) {
+          str += `<div>
+            ${array[i].name}-
+            ${array[i].email}-
+            ${array[i].password}-
+            ${array[i].dob}
+            <button onClick='deleteUser(${i})'>Delete</button></div>`;
         }
+        data.innerHTML = str;
+      }
+      function showData() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let dob = document.getElementById("dob").value;
+        // str=`${name},${email},${password},${dob}<br>`
+        // array.push(str)
+        // data.innerHTML=`${array}`
+        let user = {
+          name: name,
+          email: email,
+          password: password,
+          dob: dob,
+        };
+        array.push(user);
+        showUsers();
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>New User Signup Form</h1>
-    <p><input type="text" id="name" placeholder="enter name"></p>
-    <p><input type="text" id="email" placeholder="enter email"></p>
-    <p><input type="password" id="password" placeholder="enter password"></p>
-    <p><input type="date" id="dob" placeholder="enter dob"></p>
+    <p><input type="text" id="name" placeholder="enter name" /></p>
+    <p><input type="text" id="email" placeholder="enter email" /></p>
+    <p><input type="password" id="password" placeholder="enter password" /></p>
+    <p><input type="date" id="dob" placeholder="enter dob" /></p>
     <button onClick="showData()">Register</button>
     <div id="data"></div>
-</body>
+  </body>
 </html>
