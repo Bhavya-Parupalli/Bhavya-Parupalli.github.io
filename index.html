@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavya Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: black;
+            color: white;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px;
+            scroll-snap-align: start;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #5fdc39;
+            color: white;
+            padding: 15px 50px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background: #4ec5ea;
+            border-radius: 5px;
+        }
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            padding: 20px;
+        }
+        #about h2 {
+            margin-bottom: 20px;
+        }
+        #about p {
+            max-width: 700px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        #about .role {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #5fdc39;
+            margin-bottom: 10px;
+        }
+        .projects-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .project-card {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+        footer {
+            background:black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">BHAVYA PARUPALLI</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="role">FULL STACK DEVELOPER</div>
+        <h2>Hii! I am Bhavya Parupalli</h2>
+        <p>I am a passionate developer creating innovative solutions. I am deeply curious about Full Stack Development and love exploring both frontend and backend technologies.</p>
+        <p>From crafting interactive user experiences to building scalable server-side applications, I enjoy solving real-world problems through code.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Description of the project.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Description of the project.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: example@email.com</p>
+    </section>
+
+    <footer>
+        &copy; 2025 My Portfolio. All Rights Reserved.
+    </footer>
+</body>
+</html>
